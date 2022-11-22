@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+/* navbar start */
+nav {
+    background-color: #13c4a1;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+nav .container > a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav .container > .options {
+    display: flex;
+    column-gap: 40px;
+}
+nav .container > .options > ul,
+nav .container > .options .toolbar > ul {
+    display: flex;
+    column-gap: 40px;
+}
+nav .container > .options .toolbar > ul > li >a {
+    color: #fff;
+}
+nav .container > .options .toolbar {
+    display: flex;
+    align-items: center;
+}
+nav .container > .options > ul > li  >a {
+    color: #fff;
+    padding: 10px 0;
+    line-height: 50px;
+    font-size: 17px;
+}
+nav .container > .options > ul > li{
+    position: relative;
+}
+nav .container > .options > ul > li::before {
+    content: "";
+    position: absolute;
+    padding: 5px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-5px);
+    opacity: 0;
+    visibility: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all .5s;
+}
+nav .container > .options > ul li:hover::before {
+    left: -20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .container > .options > ul li .dropspawn {
+    position: absolute;
+    z-index: 3;
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 5px;
+    width: 220px;
+    left: -40px;
+    padding: 20px 12px;
+    transform: translateY(15px);
+    transition: all .5s;
+}
+nav .container > .options > ul li:hover > .dropspawn {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+nav .container > .options > ul li .dropspawn ul li {
+    margin: 7px 0;
+    white-space: nowrap;
+    transition: all .5s;
+}
+nav .container > .options > ul li .dropspawn ul li:hover {
+    transform: translateX(15px);
+}
+nav .container > .options > ul li .dropspawn ul li {
+    position: relative;
+}
+nav .container > .options > ul li .dropspawn ul li::before {
+    content: "";
+    position: absolute;
+    background-color: #13c4a1;
+    padding: 5px;
+    border-radius: 50%;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-5px);
+    opacity: 0;
+    transition: all .5s;
+}
+nav .container > .options > ul li .dropspawn ul li:hover::before {
+    opacity: 1;
+}
+nav .container > .options > ul li .dropspawn ul li a {
+    color: #716c80;
+    font-size: 17px;
+    transform: translateX(0);
+    transition: all .5s;
+}
+nav .container > .options > ul li .dropspawn ul li a:hover {
+    color: #13c4a1;
+}
+nav .container > .options ul li .dropspawn ul li .drop1 {
+    position: absolute;
+    white-space: nowrap;
+    background-color: #fff;
+    width: 220px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    top: -27px;
+    left: 80%;
+    visibility: hidden;
+    opacity: 0;
+}
+nav .container > .options ul li .dropspawn ul li:hover > .drop1 {
+    visibility: visible;
+    opacity: 1;
+}
+nav .container > .options .toolbar {
+    padding-top: 10px;
+}
+nav .container > .options .toolbar ul li {
+    position: relative;
+}
+nav .container > .options .toolbar ul .shop-icon::after{
+    content: "6";
+    cursor: pointer;
+    position: absolute;
+    color: #fff;
+    padding: 1px 6px;
+    background-color: #000;
+    border-radius: 50%;
+    right: -15px;
+    top: -8px;
+}
+nav .container > .options .toolbar .aside-menu {
+    display: flex;
+    width: 30px;
+    flex-wrap: wrap;
+    gap: 3px;
+    transform: translateY(-6px);
+}
+nav .container > .options .toolbar .aside-menu i {
+    font-size: 8px;
+}
+/* navbar end */
+
+/* headerbar start */
+header {
+    background-color: #13c4a1;
+    position: relative;
+    
+}
+header .container {
+    padding: 100px 0 250px;
+}
+header .container .head {
+    width: 500px;
+    font-size: 24px;
+    color: #fff;
+}
+header .container .head p {
+    margin: 30px 0;
+}
+header .container .head form {
+    display: flex;
+}
+header .container .head input {
+    padding: 20px 25px;
+    background-color: #13c4a1;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    box-shadow: 4px 4px 18px #000;
+    border: 20px ;
+}
+header .container .head a{
+    font-size: 20px;
+    position: relative;
+    z-index: 0;
+    background-color: #FF8A73;
+    box-shadow: 4px 4px 18px #000;
+    color: #fff;
+    padding: 16px 16px;
+    border-radius: 0 5px 5px 0;
+    transition: all .6s;
+}
+header .container .head a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transform: scaleX(0);
+    border-radius: 0 5px 5px 0;
+    left: 0;
+    top: 0;
+    transition: all .6s;
+}
+header .container .head a:hover::before {
+    transform: scaleX(1);
+}
+header .container div a:hover {
+    color: #FF8A73;
+}
+
+nav .container .aside-menu:hover .c8,
+nav .container .aside-menu:hover .c9, 
+nav .container .aside-menu:hover .c6  {
+    animation-name: AnimationLeft;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: unset;
+}
+nav .container .aside-menu:hover .c9 {
+    animation-delay: .4s;
+}
+nav .container .aside-menu:hover .c6 {
+    animation-delay: .2s;
+}
+
+@keyframes AnimationLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-11px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.cloud,
+.ph1,
+.ph2,
+.line,
+.slack,
+.scgCircle,
+.bubble,
+.ycircle,
+.headerend {
+    position: absolute;
+}
+.ph1,.ph2 {
+    width: 350px;
+}
+.cloud {
+    animation-name: AnimationDown;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    right: 0;
+    top: 0;
+}
+.ph1 {
+    animation-name: AnimationDown;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    right: 420px;
+    top: 50px;
+}
+.ph2 {
+    animation-name: AnimationDown;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    z-index: 2;
+    right: 200px;
+    top: 130px;
+}
+.line1 {
+    animation-name: AnimationDown;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    top: 20px;
+    left: 30px;
+}
+.line2 {
+    animation-name: AnimationDown;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    right: 10px;
+    bottom: 25px;
+}
+.bubble {
+    animation-name: AnimationDown;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    left: 60px;
+    bottom: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .4;
+}
+@keyframes AnimationDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.slack {
+    animation-name: AnimationZ;
+    animation-duration: 26s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    right: 250px;
+    top: 40px;
+    opacity: .2;
+    z-index: 1;
+}
+@keyframes AnimationZ {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.ycircle {
+    animation-name: AnimationY;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: .7;
+    top: 180px;
+    left: 28px;
+}
+@keyframes AnimationY {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+.scgCircle {
+    animation-name: AnimationXY;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    left: 49%;
+    top: 48%;
+}
+@keyframes AnimationXY {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(-45px, 50px);
+    }
+    50% {
+        transform: translate(-150px, -5px);
+    }
+    75% {
+        transform: translate(-70px, -100px);
+    }
+}
+.headerend {
+    z-index: 0;
+    left: 0;
+    bottom: -5px;
+}
+/* headerbar end */
+/* sectionbar start */
+section {
+    position: relative;
+    background-color: #fff;
+    padding: 50px;
+}
+section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+}
+section .container .companies {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+section .container .help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 600px;
+    margin: 30px 0;
+    font-size: 23px;
+}
+section .container .help h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+section .container .help p {
+    font-size: 18px;
+    color: #716c80;
+}
+section .container .help .runline{
+    width: 100px;
+    height: 5px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    margin: 15px;
+}
+section .container .help .runline::before{
+    animation-name: AnimationRunLine1;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    background-color: #13c4a1;
+}
+section .container .help .runline::after{
+    animation-name: AnimationRunLine2;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    content: "";
+    position: absolute;
+    border-radius: 4px;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background-color: #FF8A73;
+}
+@keyframes AnimationRunLine1{
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-55px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes AnimationRunLine2{
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(55px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+section .container .help-info {
+    display: flex;
+    column-gap: 20px;
+}
+section .container .help-info .help-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 120px 50px 50px;
+    box-shadow: 2px 4px 8px #eee;
+    transition: all .8s;
+}
+section .container .help-info .help-item:hover {
+    transform: translateY(-40px);
+}
+section .container .help-info .help-item i {
+    position: absolute;
+    padding: 30px;
+    font-size: 20px;
+    left: 50px;
+    top: 20px;
+    background-color: #716c80;
+    border-radius: 50%;
+    color: #13c4a1;
+    transition: all .6s;
+}
+section .container .help-info .help-item i:hover {
+    background-color: #FF8A73;
+    color: #fff;
+}
+section .container .help-info .help-item h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+section .container .help-info .help-item p {
+    color: #716c80;
+}
+section .ycircle {
+    top: 500px;
+    left: 30px;
+}
+section .cloud {
+    top: 150px;
+}
+section .line1 {
+    top: 200px;
+}
+/* sectionbar end */
